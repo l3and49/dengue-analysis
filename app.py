@@ -58,10 +58,18 @@ with col_graf1:
 
 with col_graf2:
     st.write("**Evolução dos Casos (Amostra)**")
-    if 'dt_notific' in df.columns:
-        st.line_chart(df['dt_notific'].value_counts().head(10))
+    
+    # Descobrir qual coluna representa a data no DataFrame
+    colunas_possiveis = ['dt_notific', 'dt_notificacao', 'data', 'co_notif', 'anu_notif']
+    coluna_encontrada = next((col for col in colunas_possiveis if col in df.columns), None)
+    
+    if coluna_encontrada:
+        dados_tempo = df[coluna_encontrada].value_counts().sort_index()
+        st.line_chart(dados_tempo)
     else:
-        st.info("Dados temporais indisponíveis na amostra atual.")
+        # Se não achar por nome, pega a primeira coluna que pareça texto/data ou exibe uma contagem geral
+        st.write("Visualização de registros agrupados:")
+        st.bar_chart(df.iloc[:, 0].value_counts().head(10))
 
 st.markdown("---")
 
