@@ -43,14 +43,12 @@ Outras tecnologias serão adicionadas conforme o desenvolvimento do projeto.
 
 ```text
 dengue-analysis/
-
+│
 ├── src/
-│   └── api_test.py
-├── .gitignore
-├── README.md
-├── requirements.txt
-└── ...
-```
+│   └── dados_dengue_tratados.csv   # Base de dados limpa e estruturada
+├── app.py                          # Aplicação web interativa (Streamlit)
+├── requirements.txt                # Dependências do projeto
+└── README.md                       # Documentação do projeto
 
 ## 💻 Pré-requisitos
 
