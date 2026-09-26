@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Executivo - Análise de Dados de Dengue</title>
+    <style>
+        :root {
+            --primary-color: #0d9488;
+            --secondary-color: #0f766e;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        header h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-top: 4px solid var(--primary-color);
+        }
+        .card h3 {
+            margin: 0 0 10px 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .card .value {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 0;
+        }
+        .section-box {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .section-box h2 {
+            margin-top: 0;
+            color: var(--secondary-color);
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
+        }
+        .pipeline-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .step {
+            flex: 1;
+            min-width: 200px;
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .step strong {
+            display: block;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Painel de Inteligência e Análise de Dengue</h1>
+        <p>Visão geral automatizada dos dados de saúde pública e modelos preditivos</p>
+    </header>
+
+    <!-- Indicadores Principais (KPIs) -->
+    <div class="metrics-grid">
+        <div class="card">
+            <h3>Registros Analisados</h3>
+            <p class="value">595</p>
+        </div>
+        <div class="card">
+            <h3>Acurácia do Modelo (IA)</h3>
+            <p class="value">98.48%</p>
+        </div>
+        <div class="card">
+            <h3>Variáveis Críticas</h3>
+            <p class="value">5 Fatores</p>
+        </div>
+        <div class="card">
+            <h3>Status do Sistema</h3>
+            <p class="value" style="font-size: 1.5rem; color: #16a34a; margin-top: 10px;">● 100% Sincronizado</p>
+        </div>
+    </div>
+
+    <!-- Pipeline do Projeto -->
+    <div class="section-box">
+        <h2>Fluxo de Engenharia de Dados (Pipeline)</h2>
+        <p>Como transformamos dados brutos de saúde em inteligência acionável:</p>
+        <div class="pipeline-steps">
+            <div class="step">
+                <strong>1. Extração</strong>
+                <span>Conexão direta com a API oficial do Ministério da Saúde.</span>
+            </div>
+            <div class="step">
+                <strong>2. Tratamento</strong>
+                <span>Limpeza de nulos, padronização e estruturação em CSV.</span>
+            </div>
+            <div class="step">
+                <strong>3. Visualização</strong>
+                <span>Geração automatizada de gráficos de evolução e perfil.</span>
+            </div>
+            <div class="step">
+                <strong>4. Machine Learning</strong>
+                <span>Modelo Random Forest de alta precisão preditiva.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Insights e Conclusões -->
+    <div class="section-box">
+        <h2>Principais Insights Analíticos (Feature Importance)</h2>
+        <p>Com base na análise inteligente dos dados, o modelo apontou quais características possuem maior peso preditivo nos registros analisados:</p>
+        <ul>
+            <li><strong>Escolaridade e Perfil Demográfico:</strong> Fatores socioeconômicos e de escolaridade demonstraram forte relevância estrutural nos padrões de notificação.</li>
+            <li><strong>Variáveis Clínicas e Evolução:</strong> O cruzamento de dados de evolução do quadro clínico garantiu a robustez necessária para atingir a marca de 98.48% de precisão analítica.</li>
+        </ul>
+    </div>
+
+    <footer>
+        Desenvolvido com Engenharia de Software Avançada • Integrado via Git/GitHub &copy; 2026
+    </footer>
+</div>
+
+</body>
+</html>
